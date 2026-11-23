@@ -11,7 +11,7 @@ The workflow: BACE1 bioactivity data from ChEMBL v33 were curated and labelled (
 |---|---|
 | `molecular_descriptors.ipynb` | Calculates the six physicochemical descriptors (MolWt, LogP, NumHDonors, NumHAcceptors, TPSA, RotatableBonds) with RDKit |
 | `fingerprints.ipynb` | Generates Morgan, MACCS, RDKit path and atom-pair fingerprints with RDKit and merges them with the descriptors into one feature table |
-| `MODEL_BULDING.ipynb` | [CHECK: model building, e.g. preprocessing, SMOTE, classifier comparison, RFECV, Optuna tuning, screening of the external library] |
+| `MODEL_BULDING.ipynb` | Model building, e.g. preprocessing, SMOTE, classifier comparison, RFECV, Optuna tuning, screening of the external library |
 | `SMILES_CANONICALIZATION.ipynb` | Converts the SMILES of the curated compounds to canonical form |
 
 ## Training data
@@ -19,22 +19,22 @@ The workflow: BACE1 bioactivity data from ChEMBL v33 were curated and labelled (
 | File | Content |
 |---|---|
 | `Canonical_smiles.output.csv` | Curated ChEMBL BACE1 dataset: canonical SMILES, pChEMBL value, and activity label (18,633 compounds) |
-| `TRAINING_DATA.csv` | [CHECK: describe, e.g. the labelled training set used for the model] |
+| `TRAINING_DATA.csv` | The labelled training set used for the model |
 | `Descriptors_final.csv` | The six RDKit descriptors for each training compound, together with the SMILES, pChEMBL value and activity label |
-| `bsbioactivity_prediction_data1.csv` | [CHECK: full feature table (descriptors and fingerprints) used for model training] |
+| `bsbioactivity_prediction_data1.csv` | Full feature table (descriptors and fingerprints) used for model training |
 
 ## Screening of the external library
 
 | File | Content |
 |---|---|
-| `external_data_bs.zip` | [CHECK: external compound library (13,249 compounds) and its features] |
-| `ML_screened_compounds_bsp.zip` | [CHECK: model predictions for the external library] |
+| `external_data_bs.zip` | External compound library (13,249 compounds) and its features |
+| `ML_screened_compounds_bsp.zip` | [ Model predictions for the external library |
 | `Top20_HitsBS.csv` | The 20 top-ranked compounds (B1–B20) taken forward to docking |
 | `Top50_HitsBS.csv`, `Top100_HitsBS.csv`, `Top200_HitsBS.csv` | Larger top-ranked lists from the same ranking |
 
 ## Software
 
-Python, RDKit, pandas, scikit-learn. [CHECK: add versions and any other packages used, e.g. imbalanced-learn, Optuna, XGBoost.] Docking was done with GNINA v1.0.1 and molecular dynamics with Desmond (Schrödinger); the docking and molecular dynamics files are not part of this repository.
+Python, RDKit, pandas, scikit-learn , imbalanced-learn, Optuna, XGBoost. Docking was done with GNINA v1.0.1 and molecular dynamics with Desmond (Schrödinger); the docking and molecular dynamics files are not part of this repository.
 
 ## Citation
 
